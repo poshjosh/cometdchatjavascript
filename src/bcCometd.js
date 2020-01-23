@@ -169,8 +169,8 @@ var bcCometd = {
                 windowArray : windowInfoArray
             };
             
-            var sendChatMessage = (from, to, msg) => bcCometd.sendChatMessage(from, to, msg);
-            var getWindowArrayCount = () => bcCometd.windowInfo.getArray().length;
+            var sendChatMessage = function(from, to, msg) { return bcCometd.sendChatMessage(from, to, msg); };
+            var getWindowArrayCount = function() { return bcCometd.windowInfo.getArray().length; };
             chatWindowObj.init(cfg, sendChatMessage, getWindowArrayCount);
 
             //collect all chat windows opended so far.
@@ -232,6 +232,6 @@ var bcCometd = {
     }
 };
 
-export default bcCometd;
+module.exports = bcCometd;
 
 

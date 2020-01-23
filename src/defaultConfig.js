@@ -23,5 +23,5 @@ var defaultConfig = {
     }
 };
 
-export default defaultConfig;
+module.exports = defaultConfig;
 

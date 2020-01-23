@@ -228,6 +228,6 @@ function cometdWrapper(){
     };	
 }
 
-export default cometdWrapper;
+module.exports = cometdWrapper;
 
 

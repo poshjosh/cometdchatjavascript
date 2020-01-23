@@ -200,5 +200,5 @@ var docUtil = {
     }
 };
 
-export default docUtil;
+module.exports = docUtil;
 

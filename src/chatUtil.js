@@ -169,4 +169,4 @@ var chatUtil = {
     }
 };
 
-export default chatUtil;
+module.exports = chatUtil;

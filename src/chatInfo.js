@@ -137,5 +137,5 @@ function chatInfo(){
     };
 }
 
-export default chatInfo;
+module.exports = chatInfo;
 

@@ -108,5 +108,5 @@ var soundPlayer = {
     }
 };
 
-export default soundPlayer;
+module.exports = soundPlayer;
 

@@ -78,5 +78,6 @@ var bcUtil = {
     }
 };
 
-export default bcUtil;
+module.exports = bcUtil;
+//export default bcUtil;
 

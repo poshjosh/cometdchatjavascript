@@ -77,7 +77,7 @@ function chatWindow() {
     
     this.addOnClickListener = function(el, fnHandler, context) {
         $(el).bind("click", context, function(evt) {
-            if(context != undefined) {
+            if(context !== undefined) {
                 fnHandler(context);
             } else {
                 fnHandler();
@@ -278,4 +278,4 @@ function chatWindow() {
     };
 }
 
-export default chatWindow;
+module.exports = chatWindow;
