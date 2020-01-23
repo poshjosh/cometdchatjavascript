@@ -24,12 +24,11 @@
         
         <form>
             <b>Join Chat</b>
-            <p><label>
-                    Username: <input type="text" name="chatuser" id="chatuser"/>
-                    <small>Your ID which will appear to others</small>
-                </label>
-                <br/>
-                <label for="chatuser" id="chatuserMessage"></label>
+            <p>
+                <label for="chatuser">Username: </label>
+                <input type="text" name="chatuser" id="chatuser"/>
+                <small>Your ID which will appear to others</small>
+                <br/><span id="chatuserMessage"></span>
             </p>
             <p><input type="button" onclick="joinChatRoom('chatuser');" value="Join Chat"></p>
         </form>
@@ -46,32 +45,15 @@
             
             $(document).ready(function(){ 
                 
-//                var baseUrl = location.protocol + "//" + location.host;
-                var baseUrl = 'http://localhost:8080';
-                var contextPath = '/chatexample'; 
-                var contextUrl = baseUrl + contextPath;
-                
                 var config = {
                     /** 'id' of a 'div' or 'span' tag which keeps list of online users */
-                    memberListContainerID: 'members',       /** required = false */
-                    userDisplayName: 'me',                  /** required = false */
-                    windowBackground: '#31B404',            /** required = false */
-                    logLevel: 'debug',                      /** required = false, [warn|info|debug], default=info */
-                    chat: {channel:'/service/privatechat', room: '/chat/demo', endpoint: contextUrl + "/cometd"},
-                    members: {channel:'/service/members', room:'/members/demo', endpoint: contextUrl + "/chatMembers"},
-                    soundFiles: {
-                        'sounds/beep.ogg' : 'audio/ogg',
-                        'sounds/beep.wav' : 'audio/wave',
-                        'sounds/beep.mp3' : 'audio/mpeg',
-                        'sounds/beep.m4a' : 'audio/mpeg'
-                    }
+                    memberListContainerID: 'members',   /** required = false, text */
+                    userDisplayName: 'me',              /** required = false, text */
+                    windowBackground: '#31B404',        /** required = false, color */
+                    logLevel: 'debug'                   /** required = false, [warn|info|debug], default=info */
                 };
                 
-                $("body").append("<br/>Initializing chat<br/>");
-                
                 bcCometd.init(config);
-                
-                $("body").append("<br/>Done initializing chat<br/>");
             });
             
             function joinChatRoom(usernameElemId) {
@@ -80,15 +62,15 @@
                 
                 if(!username) {
                     
-                    $("#" + usernameElemId + "Message").val("Invalid username");
-                    
-                    return;
-                }
+                    $("#" + usernameElemId + "Message").css("color", "red").val("Invalid username");
+
+                }else{
                 
-                bcCometd.joinChat(username, function(){
-                    
-                    window.alert("Successfully joined chat as: " + username);
-                });
+                    bcCometd.joinChat(username, function(){
+
+                        $("#" + usernameElemId + "Message").css("color", "green").val("Successfully joined chat as: " + username);
+                    });
+                }
             }
         </script>
     </body>
