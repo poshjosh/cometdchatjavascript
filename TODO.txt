@@ -1,0 +1,14 @@
+Remove variable serverAvailable from BcCometd.js
+
+remove chatInfo window and chatInfo cometd when disconnect... etc
+
+When I scrolled up in firefox the chat window did not stay fixed but scrolled up
+
+In chatWindow, this line is not working, at least in firefox on local machine
+
+1.    chatContainer.scrollIntoView();
+
+Emojis
+Display offline to other user if any chatting user signs out
+
+
