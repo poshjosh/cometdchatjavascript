@@ -1,6 +1,6 @@
 var $ = require('jquery');
-var docUtil = require('./docUtil').default;
-var bcUtil = require('./bcUtil').default;
+var docUtil = require('./docUtil');
+var bcUtil = require('./bcUtil');
 
 var chatUtil = {
     

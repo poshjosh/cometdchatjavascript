@@ -1,5 +1,5 @@
-var chatUtil = require('./chatUtil').default;
-var bcUtil = require('./bcUtil').default;
+var chatUtil = require('./chatUtil');
+var bcUtil = require('./bcUtil');
 
 function cometdWrapper(){
 

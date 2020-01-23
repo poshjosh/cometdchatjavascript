@@ -1,7 +1,7 @@
 var $ = require('jquery');
-var docUtil = require('./docUtil').default;
-var soundPlayer = require('./soundPlayer').default; 
-var bcUtil = require('./bcUtil').default;
+var docUtil = require('./docUtil');
+var soundPlayer = require('./soundPlayer'); 
+var bcUtil = require('./bcUtil');
 
 /**
  * @author Semika Siriwardana(semika.siriwardana@gmail.com)

@@ -1,13 +1,13 @@
 var $ = require('jquery');
 var cometdLibrary = require('cometd');
-var chatInfo = require('./chatInfo').default;
-var chatUtil = require('./chatUtil').default;
-var docUtil = require('./docUtil').default;
-var soundPlayer = require('./soundPlayer').default;
-var bcUtil = require('./bcUtil').default;
-var defaultConfig = require('./defaultConfig').default;
-var chatWindow = require('./chatWindow').default;
-var cometdWrapper = require('./cometdWrapper').default;
+var chatInfo = require('./chatInfo');
+var chatUtil = require('./chatUtil');
+var docUtil = require('./docUtil');
+var soundPlayer = require('./soundPlayer');
+var bcUtil = require('./bcUtil');
+var defaultConfig = require('./defaultConfig');
+var chatWindow = require('./chatWindow');
+var cometdWrapper = require('./cometdWrapper');
 
 var bcCometd = {
     

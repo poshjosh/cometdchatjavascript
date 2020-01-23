@@ -1,4 +1,4 @@
-var bcCometd = require('./bcCometd').default;
+var bcCometd = require('./bcCometd');
 
 module.exports = bcCometd;
 

@@ -1,7 +1,14 @@
 var bcUtil = {
     
     verbose : false,
+    nonce : 0, /** Used to uniquely identify randomly generated usernames */
     
+    /**
+     * @param {string} str the string to truncate to 0 < len <= max
+     * @param {number} max the maximum length for the output
+     * @param {string} suffix
+     * @returns the truncated string
+     */
     truncate: function(str, max, suffix) {
         var len = str.length;
         var res = str.substring(0, Math.min(len, max));
@@ -17,7 +24,8 @@ var bcUtil = {
     },
     
     generateRandomUsername: function(prefix) {
-        return prefix + '_' + (new Date()).getTime().toString(16);
+        prefix = (prefix && prefix !== null) ? prefix + '_' : '';
+        return prefix + (new Date().getTime() + bcUtil.nonce ++).toString(16);
     },
     
     // Skip unnecessary comparisons using the second parameter of indexOf to skip ahead.
@@ -79,5 +87,4 @@ var bcUtil = {
 };
 
 module.exports = bcUtil;
-//export default bcUtil;
 
