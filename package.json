@@ -2,7 +2,7 @@
     "name": "cometdchatjavascript",
     "version": "1.0.0",
     "description": "",
-    "license": "SEE LICENSE IN LICENSE.txt",
+    "license": "SEE LICENSE IN LICENSE",
     "homepage": "https://github.com/poshjosh/cometdchatjavascript",
     "browser": "dist/main.js",
     "private": true,
