@@ -16,10 +16,7 @@ A script for integrating Cometd based chat functionality into a Java Web Apps
 
 ```
 npm install jquery
-npm install mustache
-npm install fs
-npm install require-all
-npm install glob
+npm install cometd
 ```
 
 - Run command: npm run build, e.g:
@@ -47,7 +44,8 @@ The npm run build command does the following:
 - src
     - index.js
 
-### Sample index.html
+### Sample index.html 
+Put the link to the script at the bottom of the page, inside the body tag
 
 ```html
 <!DOCTYPE html>
@@ -56,20 +54,11 @@ The npm run build command does the following:
         <title>Index Page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" src="main.js"></script>
     </head>
     <body>
         <div>Index Page</div>
+        <script type="text/javascript" src="main.js"></script>
     </body>
 </html>
 ```
 
-### Notes
-
-Error: ERROR in ./node_modules/require-all/index.js Module not found: Error: Can't resolve 'fs'
-Solution: Add into module.exports of file webpack.config.js, the lines below:
-
-```javascript
-    node: { fs: 'empty' },
-    target: 'web'
-```
