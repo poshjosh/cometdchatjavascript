@@ -2,6 +2,8 @@
 
 A script for integrating Cometd based chat functionality into a Java Web Apps
 
+#### This project has been integrated into (poshjosh/cometdchat)[https://github.com/poshjosh/cometdchat]. All the necessary information have been moved to that project. This project is only maintained for reference purposes. 
+
 ### Building the script
 
 - Open command prompt
